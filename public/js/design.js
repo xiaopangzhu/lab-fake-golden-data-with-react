@@ -11,20 +11,23 @@ const App = React.createClass({
     };
   },
 
-  render: function () {
-
+  getInputs: function () {
     let inputs;
     if (this.props.inputs !== []) {
       inputs = this.props.inputs;
-      // this.props.inputs = [];
     }
     else {
       inputs = [];
     }
+    return inputs;
+  },
+
+  render: function () {
+
+    let inputs = this.getInputs();
     this.setState({inputs:inputs});
 
     inputs = this.state.inputs;
-    // const inputs = this.state.inputs;
     const inputText = inputs.map((input, index) => {
       if (input === 1) {
         return (
@@ -74,12 +77,10 @@ const App = React.createClass({
   },
 
   add: function () {
-    let isChecked = this.refs.text.checked;
-    if (isChecked) {
+    if (this.refs.text.checked) {
       this.state.inputs.push(1);
     }
-    isChecked = this.refs.date.checked;
-    if (isChecked) {
+    if (this.refs.date.checked) {
       this.state.inputs.push(0);
     }
     this.setState({inputs: this.state.inputs});
@@ -128,8 +129,5 @@ const Edit = React.createClass({
     ReactDOM.render(<App inputs={this.props.inputs}/>, document.body);
   }
 })
-
-{/*ReactDOM.render(<Edit inputs={[1,0,1,0]}/>,document.body)*/
-}
 
 ReactDOM.render(<App />, document.body)
