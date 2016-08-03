@@ -1,0 +1,56 @@
+body{
+    background-color: lightgray;
+}
+
+.wrap {
+    border: 1px solid whitesmoke;
+    overflow: hidden;
+    margin: 20px 100px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.header, .footer {
+    width: 50px;
+    margin: 10px auto;
+}
+
+.left {
+    width: 50%;
+    float: left;
+}
+
+.text {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.text span{
+    margin-left: 10px;
+}
+
+.text input{
+    display: inline;
+    width: 200px;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    height: 550px;
+    padding-top: 100px;
+    padding-left: 130px;
+    border-left: 1px solid lightslategrey;
+    box-shadow: 0 3px 3px lightslategrey;
+}
+
+.middle{
+    width: 500px;
+    height: 500px;
+    margin: 10px auto;
+    border: 2px solid darksalmon;
+}
+
+.sellect{
+    margin-bottom: 20px;
+}
